@@ -1,0 +1,85 @@
+@import './root.scss';
+@import './reset.scss';
+
+$--black: #262626;
+$--gray: #F7F6F7;
+@mixin adaptive-value($property, $minValue, $maxValue, $container: 1200px) {
+    #{$property}: calc(#{$minValue}px + ($maxValue - $minValue) * ((100vw - 320px) / ($container - 320)));
+  }
+  
+  @mixin adaptive-properties($property, $minValue, $maxValue, $container: 1200px) {
+    @include adaptive-value(font-size, $minValue, $maxValue, $container);
+    @include adaptive-value(padding, $minValue, $maxValue, $container);
+   
+  }
+  .container{
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   padding: 20px;
+   border: 1px solid #070101;
+   background-color: #070101;
+   margin: 0 auto;
+   margin-bottom: 40px;
+   color: #F7F6F7;
+   @include adaptive-value('margin-bottom', 30, 40, $container:1400);
+ @include adaptive-value('margin-top', 30, 40, $container:1400);
+    @media  screen and (max-width:1023px) {
+        @include adaptive-value('padding-top', 10, 20, $container:1200);
+        @include adaptive-value('padding-bottom', 10, 20, $container:1200);
+       }
+      &:hover{
+        background-color: transparent;
+       }
+      .light &:hover{
+        color: #333;
+       }
+      .dark &:hover{
+        color: #fefefe;
+       }
+  }
+
+body {
+    background-color:#b87034;
+    transition: .5s ease;
+}
+body.dark {
+    background-color: #192426;
+}
+
+.bg__container{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+.images-wrap{
+  position: relative;
+  min-width: 100%;
+  min-height: 100vh;
+  
+  margin: 0 auto;
+  margin-bottom: 40px;
+  overflow: hidden;
+    & img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      transition: opacity .5s ease;
+      
+    }
+}
+.dark .image-box {
+  filter: brightness(50%); 
+}
