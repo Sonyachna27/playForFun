@@ -25,6 +25,7 @@ function animate() {
     function step(timestamp) {
         const progress = Math.min((timestamp - startTimestamp) / duration, 1);
         imageBox.style.opacity = progress;
+        
         if (progress < 1) {
             requestAnimationFrame(step);
         }
