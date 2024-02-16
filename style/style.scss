@@ -62,7 +62,7 @@ body {
 .images-wrap{
   position: relative;
   min-width: 100%;
-  min-height: 100vh;
+  min-height: 50vh;
   margin: 0 auto;
   margin-bottom: 40px;
   overflow: hidden;
@@ -70,11 +70,10 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       transition: opacity .5s ease;
-      
     }
 }
 
@@ -90,7 +89,7 @@ body {
   overflow: hidden;
   
   & h1{
-    @include adaptive-value('font-size', 19, 48, $container:1200);
+    @include adaptive-value('font-size', 19, 48, $container:1400);
     max-width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -136,7 +135,7 @@ body {
   max-height: 100vh;
   overflow: hidden;
   max-width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
   background: url(../images/city.webp) center center / cover no-repeat;
   &__text{
