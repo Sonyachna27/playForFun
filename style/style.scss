@@ -1,8 +1,9 @@
 @import './root.scss';
 @import './reset.scss';
-
+@import './animation.scss';
 $--black: #262626;
 $--gray: #F7F6F7;
+$--margin: calc(1vw + 1vh);
 @mixin adaptive-value($property, $minValue, $maxValue, $container: 1200px) {
     #{$property}: calc(#{$minValue}px + ($maxValue - $minValue) * ((100vw - 320px) / ($container - 320)));
   }
@@ -14,7 +15,7 @@ $--gray: #F7F6F7;
   }
   .container{
     padding: 0 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
@@ -30,8 +31,8 @@ $--gray: #F7F6F7;
    margin: 0 auto;
    margin-bottom: 40px;
    color: #F7F6F7;
-   @include adaptive-value('margin-bottom', 30, 40, $container:1400);
- @include adaptive-value('margin-top', 30, 40, $container:1400);
+    @include adaptive-value('margin-bottom', 30, 40, $container:1400);
+    @include adaptive-value('margin-top', 30, 40, $container:1400);
     @media  screen and (max-width:1023px) {
         @include adaptive-value('padding-top', 10, 20, $container:1200);
         @include adaptive-value('padding-bottom', 10, 20, $container:1200);
@@ -51,7 +52,6 @@ body {
     background-color:#000000;
     transition: .5s ease;
 }
-
 
 .bg__container{
     position: relative;
@@ -77,15 +77,7 @@ body {
       
     }
 }
-@keyframes animateBg {
-  0% {
-      left: 0;
-  }
 
-  100% {
-      left: -100%;      
-  }
-}
 
 .cloud__section {
   min-height: 100vh;
@@ -138,5 +130,56 @@ body {
   }
 }
 
+.random{
+  position: relative;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  max-width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: url(../images/city.jpg) center center / cover no-repeat;
+  &__text{
+    max-width: 87%;
+    text-align: center;
+    @include adaptive-value('font-size', 32, 68, $container:1600);
+    color: #21894c;
+    text-shadow: 4px 4px 2px rgba(31,86,121,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: calc($--margin * 8) auto;
+    height: 100%;
+  }
+#circle__wrap{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: inherit;
+  min-width: 100%;
+  
+  z-index: 1;
+  .circle-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  transform: translateY(-10vh);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 5;
+  .circle{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    animation: animateCircle 200ms linear infinite, animateCircleScale 2s linear infinite;
+    background-image: radial-gradient(
+      hsl(180, 100%, 80%),
+      hsl(180, 100%, 80%) 10%,
+      hsla(180, 100%, 80%, 0) 56%
+    )
 
-
+  }
+}
+}
+  }
