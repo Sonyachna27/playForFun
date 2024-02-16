@@ -1,0 +1,66 @@
+
+@keyframes animateBg {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;      
+    }
+  }
+
+  
+@keyframes animateCircle {
+    0% {
+        opacity: 1;
+    }
+    50%{
+        opacity: .7;
+    }
+    100% {
+        opacity: 1;      
+    }
+  }
+@keyframes animateCircleScale{
+    0% {
+        transform: scale3d(0.4, 0.4, 1);
+      }
+      50% {
+        transform: scale3d(2.2, 2.2, 1);
+      }
+      100% {
+        transform: scale3d(0.4, 0.4, 1);
+      }
+}
+
+  $particleNum: 200;
+  $particleColor: hsl(180, 100%, 80%);
+  $particleBaseSize: 8; 
+
+  @for $i from 1 through $particleNum {
+    .random #circle__wrap .circle-container:nth-child(3n + #{$i}) {
+      $circleSize: random($particleBaseSize);
+      width: $particleBaseSize + px;
+      height: $particleBaseSize + px;
+      $startCirclePosition: random(91) + 10; 
+@if $startCirclePosition > 100 {
+  $startCirclePosition: 100; 
+}
+      $circleMove: 'move-circle-' + $i;
+      $moveDuration: 28000 + random(9000) + ms;
+      animation-name: #{$circleMove};
+      animation-duration: $moveDuration;
+      animation-delay: random(37000) + ms;
+      @keyframes #{$circleMove} {
+        from {
+          transform: translate3d(random(100) + vw, $startCirclePosition + vh, 0);
+        }
+        to {
+          transform: translate3d(random(100) + vw, -$startCirclePosition - random(30) + vh, 0);
+        }
+      }
+      .circle {
+        animation-delay: random(4000) + ms;
+      }
+    }
+    
+  }
