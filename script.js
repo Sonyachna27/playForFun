@@ -59,8 +59,7 @@ let observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const targetElement = entry.target;
-      const statValues = targetElement.querySelectorAll('.cloud__section-bg');
-      
+      const statValues = targetElement.querySelectorAll('.cloud__div-bg');
       statValues.forEach(value => {
         value.style.animationName = 'animateBg';
       });
@@ -68,7 +67,7 @@ let observer = new IntersectionObserver((entries, observer) => {
   })
 }, { threshold: 0.3 });
 
-let sections = document.querySelectorAll('.cloud__section');
+let sections = document.querySelectorAll('.cloud__div');
 if (sections.length) {
   sections.forEach(section => {
     observer.observe(section);
