@@ -63,6 +63,7 @@ let observer = new IntersectionObserver((entries, observer) => {
       statValues.forEach(value => {
         value.style.animationName = 'animateBg';
       });
+      observer.unobserve(entry.target);
     }
   })
 }, { threshold: 0.3 });
@@ -95,9 +96,10 @@ let observerForCircle = new IntersectionObserver((entries, observer) => {
       if (circleWrap) {
         createCircle(circleWrap); 
       }
+      observer.unobserve(entry.target);
     }
   })
-}, { threshold: 0.3 });
+}, { threshold: 0.1 });
 
 let sectionsRandom = document.querySelectorAll('.random');
 if (sectionsRandom.length) {
