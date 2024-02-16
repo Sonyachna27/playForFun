@@ -42,9 +42,9 @@
       width: $particleBaseSize + px;
       height: $particleBaseSize + px;
       $startCirclePosition: random(91) + 10; 
-@if $startCirclePosition > 100 {
-  $startCirclePosition: 100; 
-}
+      @if $startCirclePosition > 100 {
+        $startCirclePosition: 100; 
+      }
       $circleMove: 'move-circle-' + $i;
       $moveDuration: 28000 + random(9000) + ms;
       animation-name: #{$circleMove};
