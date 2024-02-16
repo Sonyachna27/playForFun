@@ -1,7 +1,7 @@
 const buttonClick = document.querySelectorAll('.btn');
 const bodyTheme = document.body;
-let sunImageSrc = "./images/sun ball.jpg";
-let moonImageSrc = "./images/moon.jpg";
+let sunImageSrc = "./images/sun-ball.webp";
+let moonImageSrc = "./images/moon.webp";
 const imageBox = document.querySelector('.image-box');
 const animateSection = document.querySelector('.cloud__section-bg');
 let frontImage = true;
@@ -55,25 +55,25 @@ buttonClick.forEach((button) => {
   });
 });
 
-// let observer = new IntersectionObserver((entries, observer) => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       const targetElement = entry.target;
-//       const statValues = targetElement.querySelectorAll('.cloud__section-bg');
+let observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const targetElement = entry.target;
+      const statValues = targetElement.querySelectorAll('.cloud__section-bg');
       
-//       statValues.forEach(value => {
-//         value.style.animationName = 'animateBg';
-//       });
-//     }
-//   })
-// }, { threshold: 0.3 });
+      statValues.forEach(value => {
+        value.style.animationName = 'animateBg';
+      });
+    }
+  })
+}, { threshold: 0.3 });
 
-// let sections = document.querySelectorAll('.cloud__section');
-// if (sections.length) {
-//   sections.forEach(section => {
-//     observer.observe(section);
-//   })
-// }
+let sections = document.querySelectorAll('.cloud__section');
+if (sections.length) {
+  sections.forEach(section => {
+    observer.observe(section);
+  })
+}
 
 function createCircle() {
   const createElementWrap = document.querySelector('#circle__wrap');
