@@ -78,56 +78,6 @@ body {
 }
 
 
-.cloud__div {
-  min-height: 100vh;
-  min-width: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  
-  & h1{
-    @include adaptive-value('font-size', 19, 48, $container:1400);
-    max-width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    color: #fd8100;
-    text-shadow: hsl(0, 75%, 2%) 1px 0 10px;
-  }
-
-  &-bg{
-    width: 300%;
-    height: 300%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    animation-duration: 100.75s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    & img {
-      position: absolute;
-      top: 0;
-      width: 80%;
-      height: 100%;
-      object-fit: cover;
-    }
-    & img:nth-of-type(1){
-      width:50%;
-      left: 0;
-    }
-    & img:nth-of-type(2){
-      width:33.3%;
-      left: 33.3%;
-    }
-    & img:nth-of-type(3){
-      width: 33.3%;
-      left: 66.6%;
-    }
-  }
-}
 
 .random{
   position: relative;
