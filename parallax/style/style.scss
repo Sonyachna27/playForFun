@@ -52,6 +52,7 @@ overflow: hidden;
         height: 1px;
         position: relative;
         background: transparent;
+        border-radius: 50%;
         animation: animateShadows 80s linear infinite;
         &:after{
         position: absolute;
@@ -59,11 +60,13 @@ overflow: hidden;
         height: 1px;
         background: transparent;
         box-shadow: $shadow-small;
+        border-radius: 50%;
         content: "";
         }
     }
     #star2{
         display: block;
+        border-radius: 50%;
         width: 2px;
         height: 2px;
         position: relative;
@@ -71,6 +74,7 @@ overflow: hidden;
         animation: animateShadows 100s linear infinite;
         &:after{
             position: absolute;
+            border-radius: 50%;
             width: 2px;
             height: 2px;
             background: transparent;
@@ -84,6 +88,7 @@ overflow: hidden;
         height: 3px;
         position: relative;
         background-color: antiquewhite;
+        border-radius: 50%;
         animation: animateShadows 180s linear infinite;
         &:after{
             position: absolute;
@@ -92,6 +97,7 @@ overflow: hidden;
             height: 3px;
             background: transparent;
             box-shadow: $shadow-big;
+            border-radius: 50%;
     
             }
     }

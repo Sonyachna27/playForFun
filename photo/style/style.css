@@ -1,0 +1,1719 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/forest.jpg) center center/cover no-repeat;
+  overflow: hidden;
+}
+
+.snow-container {
+  position: relative;
+}
+
+@keyframes circle-scale {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes opacitySnow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.snow:nth-of-type(3n + 1) {
+  width: 10px;
+  height: 10px;
+  animation-name: move-snow-1;
+  animation-duration: 28536ms;
+  animation-delay: 10372ms;
+}
+@keyframes move-snow-1 {
+  0% {
+    transform: translate3d(65vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(99vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 2) {
+  width: 15px;
+  height: 15px;
+  animation-name: move-snow-2;
+  animation-duration: 28116ms;
+  animation-delay: 37325ms;
+}
+@keyframes move-snow-2 {
+  0% {
+    transform: translate3d(84vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(21vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 3) {
+  width: 5px;
+  height: 5px;
+  animation-name: move-snow-3;
+  animation-duration: 28973ms;
+  animation-delay: 31969ms;
+}
+@keyframes move-snow-3 {
+  0% {
+    transform: translate3d(82vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(37vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 4) {
+  width: 10px;
+  height: 10px;
+  animation-name: move-snow-4;
+  animation-duration: 28507ms;
+  animation-delay: 19560ms;
+}
+@keyframes move-snow-4 {
+  0% {
+    transform: translate3d(19vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(81vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 5) {
+  width: 5px;
+  height: 5px;
+  animation-name: move-snow-5;
+  animation-duration: 28326ms;
+  animation-delay: 11294ms;
+}
+@keyframes move-snow-5 {
+  0% {
+    transform: translate3d(65vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(69vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 6) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-6;
+  animation-duration: 28738ms;
+  animation-delay: 18444ms;
+}
+@keyframes move-snow-6 {
+  0% {
+    transform: translate3d(21vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(4vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 7) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-7;
+  animation-duration: 28748ms;
+  animation-delay: 1608ms;
+}
+@keyframes move-snow-7 {
+  0% {
+    transform: translate3d(81vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(43vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 8) {
+  width: 14px;
+  height: 14px;
+  animation-name: move-snow-8;
+  animation-duration: 28478ms;
+  animation-delay: 8038ms;
+}
+@keyframes move-snow-8 {
+  0% {
+    transform: translate3d(55vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(27vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 9) {
+  width: 12px;
+  height: 12px;
+  animation-name: move-snow-9;
+  animation-duration: 28996ms;
+  animation-delay: 38037ms;
+}
+@keyframes move-snow-9 {
+  0% {
+    transform: translate3d(49vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(26vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 10) {
+  width: 11px;
+  height: 11px;
+  animation-name: move-snow-10;
+  animation-duration: 28082ms;
+  animation-delay: 5709ms;
+}
+@keyframes move-snow-10 {
+  0% {
+    transform: translate3d(16vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(56vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 11) {
+  width: 14px;
+  height: 14px;
+  animation-name: move-snow-11;
+  animation-duration: 28786ms;
+  animation-delay: 12994ms;
+}
+@keyframes move-snow-11 {
+  0% {
+    transform: translate3d(3vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(23vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 12) {
+  width: 9px;
+  height: 9px;
+  animation-name: move-snow-12;
+  animation-duration: 28074ms;
+  animation-delay: 6963ms;
+}
+@keyframes move-snow-12 {
+  0% {
+    transform: translate3d(75vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(93vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 13) {
+  width: 7px;
+  height: 7px;
+  animation-name: move-snow-13;
+  animation-duration: 28183ms;
+  animation-delay: 28767ms;
+}
+@keyframes move-snow-13 {
+  0% {
+    transform: translate3d(73vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(61vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 14) {
+  width: 11px;
+  height: 11px;
+  animation-name: move-snow-14;
+  animation-duration: 28056ms;
+  animation-delay: 2714ms;
+}
+@keyframes move-snow-14 {
+  0% {
+    transform: translate3d(62vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(16vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 15) {
+  width: 4px;
+  height: 4px;
+  animation-name: move-snow-15;
+  animation-duration: 28938ms;
+  animation-delay: 5481ms;
+}
+@keyframes move-snow-15 {
+  0% {
+    transform: translate3d(44vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(55vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 16) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-16;
+  animation-duration: 28605ms;
+  animation-delay: 8480ms;
+}
+@keyframes move-snow-16 {
+  0% {
+    transform: translate3d(68vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(81vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 17) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-17;
+  animation-duration: 28754ms;
+  animation-delay: 15826ms;
+}
+@keyframes move-snow-17 {
+  0% {
+    transform: translate3d(89vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(61vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 18) {
+  width: 9px;
+  height: 9px;
+  animation-name: move-snow-18;
+  animation-duration: 28508ms;
+  animation-delay: 6079ms;
+}
+@keyframes move-snow-18 {
+  0% {
+    transform: translate3d(-3vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(79vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 19) {
+  width: 11px;
+  height: 11px;
+  animation-name: move-snow-19;
+  animation-duration: 28741ms;
+  animation-delay: 18255ms;
+}
+@keyframes move-snow-19 {
+  0% {
+    transform: translate3d(63vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(38vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 20) {
+  width: 2px;
+  height: 2px;
+  animation-name: move-snow-20;
+  animation-duration: 28412ms;
+  animation-delay: 36015ms;
+}
+@keyframes move-snow-20 {
+  0% {
+    transform: translate3d(67vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(76vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 21) {
+  width: 12px;
+  height: 12px;
+  animation-name: move-snow-21;
+  animation-duration: 28861ms;
+  animation-delay: 49225ms;
+}
+@keyframes move-snow-21 {
+  0% {
+    transform: translate3d(49vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(58vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 22) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-22;
+  animation-duration: 28389ms;
+  animation-delay: 45916ms;
+}
+@keyframes move-snow-22 {
+  0% {
+    transform: translate3d(55vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(90vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 23) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-23;
+  animation-duration: 28045ms;
+  animation-delay: 18567ms;
+}
+@keyframes move-snow-23 {
+  0% {
+    transform: translate3d(41vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(76vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 24) {
+  width: 10px;
+  height: 10px;
+  animation-name: move-snow-24;
+  animation-duration: 28352ms;
+  animation-delay: 27887ms;
+}
+@keyframes move-snow-24 {
+  0% {
+    transform: translate3d(45vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(34vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 25) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-25;
+  animation-duration: 28548ms;
+  animation-delay: 50099ms;
+}
+@keyframes move-snow-25 {
+  0% {
+    transform: translate3d(5vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(79vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 26) {
+  width: 7px;
+  height: 7px;
+  animation-name: move-snow-26;
+  animation-duration: 28338ms;
+  animation-delay: 15785ms;
+}
+@keyframes move-snow-26 {
+  0% {
+    transform: translate3d(8vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(15vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 27) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-27;
+  animation-duration: 28669ms;
+  animation-delay: 45623ms;
+}
+@keyframes move-snow-27 {
+  0% {
+    transform: translate3d(45vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(14vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 28) {
+  width: 11px;
+  height: 11px;
+  animation-name: move-snow-28;
+  animation-duration: 28337ms;
+  animation-delay: 39489ms;
+}
+@keyframes move-snow-28 {
+  0% {
+    transform: translate3d(44vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(29vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 29) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-29;
+  animation-duration: 28620ms;
+  animation-delay: 2308ms;
+}
+@keyframes move-snow-29 {
+  0% {
+    transform: translate3d(-2vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(64vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 30) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-30;
+  animation-duration: 28646ms;
+  animation-delay: 147ms;
+}
+@keyframes move-snow-30 {
+  0% {
+    transform: translate3d(64vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(20vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 31) {
+  width: 12px;
+  height: 12px;
+  animation-name: move-snow-31;
+  animation-duration: 28949ms;
+  animation-delay: 27799ms;
+}
+@keyframes move-snow-31 {
+  0% {
+    transform: translate3d(38vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(42vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 32) {
+  width: 15px;
+  height: 15px;
+  animation-name: move-snow-32;
+  animation-duration: 28529ms;
+  animation-delay: 6637ms;
+}
+@keyframes move-snow-32 {
+  0% {
+    transform: translate3d(50vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(7vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 33) {
+  width: 10px;
+  height: 10px;
+  animation-name: move-snow-33;
+  animation-duration: 28689ms;
+  animation-delay: 19168ms;
+}
+@keyframes move-snow-33 {
+  0% {
+    transform: translate3d(19vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(67vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 34) {
+  width: 5px;
+  height: 5px;
+  animation-name: move-snow-34;
+  animation-duration: 28478ms;
+  animation-delay: 50445ms;
+}
+@keyframes move-snow-34 {
+  0% {
+    transform: translate3d(17vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(35vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 35) {
+  width: 9px;
+  height: 9px;
+  animation-name: move-snow-35;
+  animation-duration: 28575ms;
+  animation-delay: 21387ms;
+}
+@keyframes move-snow-35 {
+  0% {
+    transform: translate3d(31vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(24vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 36) {
+  width: 5px;
+  height: 5px;
+  animation-name: move-snow-36;
+  animation-duration: 28859ms;
+  animation-delay: 8735ms;
+}
+@keyframes move-snow-36 {
+  0% {
+    transform: translate3d(-5vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(90vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 37) {
+  width: 3px;
+  height: 3px;
+  animation-name: move-snow-37;
+  animation-duration: 28164ms;
+  animation-delay: 16314ms;
+}
+@keyframes move-snow-37 {
+  0% {
+    transform: translate3d(-1vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(97vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 38) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-38;
+  animation-duration: 28728ms;
+  animation-delay: 34198ms;
+}
+@keyframes move-snow-38 {
+  0% {
+    transform: translate3d(53vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(8vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 39) {
+  width: 4px;
+  height: 4px;
+  animation-name: move-snow-39;
+  animation-duration: 28947ms;
+  animation-delay: 46566ms;
+}
+@keyframes move-snow-39 {
+  0% {
+    transform: translate3d(40vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(73vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 40) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-40;
+  animation-duration: 28233ms;
+  animation-delay: 12858ms;
+}
+@keyframes move-snow-40 {
+  0% {
+    transform: translate3d(46vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(41vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 41) {
+  width: 4px;
+  height: 4px;
+  animation-name: move-snow-41;
+  animation-duration: 28939ms;
+  animation-delay: 17825ms;
+}
+@keyframes move-snow-41 {
+  0% {
+    transform: translate3d(-6vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(75vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 42) {
+  width: 3px;
+  height: 3px;
+  animation-name: move-snow-42;
+  animation-duration: 28935ms;
+  animation-delay: 24037ms;
+}
+@keyframes move-snow-42 {
+  0% {
+    transform: translate3d(63vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(24vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 43) {
+  width: 11px;
+  height: 11px;
+  animation-name: move-snow-43;
+  animation-duration: 28489ms;
+  animation-delay: 45831ms;
+}
+@keyframes move-snow-43 {
+  0% {
+    transform: translate3d(6vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(45vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 44) {
+  width: 8px;
+  height: 8px;
+  animation-name: move-snow-44;
+  animation-duration: 28981ms;
+  animation-delay: 30215ms;
+}
+@keyframes move-snow-44 {
+  0% {
+    transform: translate3d(63vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(6vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 45) {
+  width: 14px;
+  height: 14px;
+  animation-name: move-snow-45;
+  animation-duration: 28062ms;
+  animation-delay: 54834ms;
+}
+@keyframes move-snow-45 {
+  0% {
+    transform: translate3d(24vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(40vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 46) {
+  width: 12px;
+  height: 12px;
+  animation-name: move-snow-46;
+  animation-duration: 28447ms;
+  animation-delay: 51978ms;
+}
+@keyframes move-snow-46 {
+  0% {
+    transform: translate3d(28vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(18vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 47) {
+  width: 3px;
+  height: 3px;
+  animation-name: move-snow-47;
+  animation-duration: 28461ms;
+  animation-delay: 21905ms;
+}
+@keyframes move-snow-47 {
+  0% {
+    transform: translate3d(27vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(26vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 48) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-48;
+  animation-duration: 28923ms;
+  animation-delay: 21149ms;
+}
+@keyframes move-snow-48 {
+  0% {
+    transform: translate3d(59vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(58vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 49) {
+  width: 7px;
+  height: 7px;
+  animation-name: move-snow-49;
+  animation-duration: 28570ms;
+  animation-delay: 54788ms;
+}
+@keyframes move-snow-49 {
+  0% {
+    transform: translate3d(-3vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(89vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 50) {
+  width: 5px;
+  height: 5px;
+  animation-name: move-snow-50;
+  animation-duration: 28527ms;
+  animation-delay: 56397ms;
+}
+@keyframes move-snow-50 {
+  0% {
+    transform: translate3d(-6vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(92vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 51) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-51;
+  animation-duration: 28014ms;
+  animation-delay: 47033ms;
+}
+@keyframes move-snow-51 {
+  0% {
+    transform: translate3d(72vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(85vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 52) {
+  width: 13px;
+  height: 13px;
+  animation-name: move-snow-52;
+  animation-duration: 28097ms;
+  animation-delay: 22275ms;
+}
+@keyframes move-snow-52 {
+  0% {
+    transform: translate3d(56vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(1vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 53) {
+  width: 2px;
+  height: 2px;
+  animation-name: move-snow-53;
+  animation-duration: 28932ms;
+  animation-delay: 36765ms;
+}
+@keyframes move-snow-53 {
+  0% {
+    transform: translate3d(17vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(75vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 54) {
+  width: 13px;
+  height: 13px;
+  animation-name: move-snow-54;
+  animation-duration: 28275ms;
+  animation-delay: 40358ms;
+}
+@keyframes move-snow-54 {
+  0% {
+    transform: translate3d(65vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(10vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 55) {
+  width: 14px;
+  height: 14px;
+  animation-name: move-snow-55;
+  animation-duration: 28206ms;
+  animation-delay: 40203ms;
+}
+@keyframes move-snow-55 {
+  0% {
+    transform: translate3d(57vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(94vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 56) {
+  width: 8px;
+  height: 8px;
+  animation-name: move-snow-56;
+  animation-duration: 28008ms;
+  animation-delay: 53224ms;
+}
+@keyframes move-snow-56 {
+  0% {
+    transform: translate3d(20vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(22vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 57) {
+  width: 13px;
+  height: 13px;
+  animation-name: move-snow-57;
+  animation-duration: 28607ms;
+  animation-delay: 13746ms;
+}
+@keyframes move-snow-57 {
+  0% {
+    transform: translate3d(16vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(65vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 58) {
+  width: 5px;
+  height: 5px;
+  animation-name: move-snow-58;
+  animation-duration: 28379ms;
+  animation-delay: 17217ms;
+}
+@keyframes move-snow-58 {
+  0% {
+    transform: translate3d(-3vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(31vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 59) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-59;
+  animation-duration: 28975ms;
+  animation-delay: 38227ms;
+}
+@keyframes move-snow-59 {
+  0% {
+    transform: translate3d(36vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(68vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 60) {
+  width: 12px;
+  height: 12px;
+  animation-name: move-snow-60;
+  animation-duration: 28749ms;
+  animation-delay: 40320ms;
+}
+@keyframes move-snow-60 {
+  0% {
+    transform: translate3d(6vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(60vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 61) {
+  width: 8px;
+  height: 8px;
+  animation-name: move-snow-61;
+  animation-duration: 28431ms;
+  animation-delay: 33393ms;
+}
+@keyframes move-snow-61 {
+  0% {
+    transform: translate3d(29vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(69vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 62) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-62;
+  animation-duration: 28956ms;
+  animation-delay: 46281ms;
+}
+@keyframes move-snow-62 {
+  0% {
+    transform: translate3d(74vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(46vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 63) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-63;
+  animation-duration: 28646ms;
+  animation-delay: 22214ms;
+}
+@keyframes move-snow-63 {
+  0% {
+    transform: translate3d(80vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(15vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 64) {
+  width: 2px;
+  height: 2px;
+  animation-name: move-snow-64;
+  animation-duration: 28837ms;
+  animation-delay: 30623ms;
+}
+@keyframes move-snow-64 {
+  0% {
+    transform: translate3d(76vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(47vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 65) {
+  width: 13px;
+  height: 13px;
+  animation-name: move-snow-65;
+  animation-duration: 28647ms;
+  animation-delay: 34556ms;
+}
+@keyframes move-snow-65 {
+  0% {
+    transform: translate3d(32vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(41vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 66) {
+  width: 10px;
+  height: 10px;
+  animation-name: move-snow-66;
+  animation-duration: 28018ms;
+  animation-delay: 27478ms;
+}
+@keyframes move-snow-66 {
+  0% {
+    transform: translate3d(10vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(95vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 67) {
+  width: 9px;
+  height: 9px;
+  animation-name: move-snow-67;
+  animation-duration: 28702ms;
+  animation-delay: 21822ms;
+}
+@keyframes move-snow-67 {
+  0% {
+    transform: translate3d(66vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(3vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 68) {
+  width: 5px;
+  height: 5px;
+  animation-name: move-snow-68;
+  animation-duration: 28829ms;
+  animation-delay: 7188ms;
+}
+@keyframes move-snow-68 {
+  0% {
+    transform: translate3d(33vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(83vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 69) {
+  width: 11px;
+  height: 11px;
+  animation-name: move-snow-69;
+  animation-duration: 28737ms;
+  animation-delay: 26425ms;
+}
+@keyframes move-snow-69 {
+  0% {
+    transform: translate3d(77vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(55vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 70) {
+  width: 5px;
+  height: 5px;
+  animation-name: move-snow-70;
+  animation-duration: 28511ms;
+  animation-delay: 38888ms;
+}
+@keyframes move-snow-70 {
+  0% {
+    transform: translate3d(71vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(72vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 71) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-71;
+  animation-duration: 28230ms;
+  animation-delay: 21334ms;
+}
+@keyframes move-snow-71 {
+  0% {
+    transform: translate3d(25vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(13vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 72) {
+  width: 4px;
+  height: 4px;
+  animation-name: move-snow-72;
+  animation-duration: 28025ms;
+  animation-delay: 47866ms;
+}
+@keyframes move-snow-72 {
+  0% {
+    transform: translate3d(26vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(90vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 73) {
+  width: 13px;
+  height: 13px;
+  animation-name: move-snow-73;
+  animation-duration: 28217ms;
+  animation-delay: 27565ms;
+}
+@keyframes move-snow-73 {
+  0% {
+    transform: translate3d(66vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(68vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 74) {
+  width: 14px;
+  height: 14px;
+  animation-name: move-snow-74;
+  animation-duration: 28032ms;
+  animation-delay: 53230ms;
+}
+@keyframes move-snow-74 {
+  0% {
+    transform: translate3d(48vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(42vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 75) {
+  width: 14px;
+  height: 14px;
+  animation-name: move-snow-75;
+  animation-duration: 28107ms;
+  animation-delay: 43306ms;
+}
+@keyframes move-snow-75 {
+  0% {
+    transform: translate3d(6vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(47vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 76) {
+  width: 12px;
+  height: 12px;
+  animation-name: move-snow-76;
+  animation-duration: 28114ms;
+  animation-delay: 11898ms;
+}
+@keyframes move-snow-76 {
+  0% {
+    transform: translate3d(23vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(56vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 77) {
+  width: 5px;
+  height: 5px;
+  animation-name: move-snow-77;
+  animation-duration: 28693ms;
+  animation-delay: 53791ms;
+}
+@keyframes move-snow-77 {
+  0% {
+    transform: translate3d(24vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(100vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 78) {
+  width: 4px;
+  height: 4px;
+  animation-name: move-snow-78;
+  animation-duration: 28691ms;
+  animation-delay: 33049ms;
+}
+@keyframes move-snow-78 {
+  0% {
+    transform: translate3d(56vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(85vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 79) {
+  width: 14px;
+  height: 14px;
+  animation-name: move-snow-79;
+  animation-duration: 28645ms;
+  animation-delay: 27098ms;
+}
+@keyframes move-snow-79 {
+  0% {
+    transform: translate3d(67vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(86vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 80) {
+  width: 6px;
+  height: 6px;
+  animation-name: move-snow-80;
+  animation-duration: 28209ms;
+  animation-delay: 12954ms;
+}
+@keyframes move-snow-80 {
+  0% {
+    transform: translate3d(60vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(72vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 81) {
+  width: 11px;
+  height: 11px;
+  animation-name: move-snow-81;
+  animation-duration: 28857ms;
+  animation-delay: 11236ms;
+}
+@keyframes move-snow-81 {
+  0% {
+    transform: translate3d(-2vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(51vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 82) {
+  width: 8px;
+  height: 8px;
+  animation-name: move-snow-82;
+  animation-duration: 28750ms;
+  animation-delay: 10164ms;
+}
+@keyframes move-snow-82 {
+  0% {
+    transform: translate3d(17vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(12vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 83) {
+  width: 10px;
+  height: 10px;
+  animation-name: move-snow-83;
+  animation-duration: 28769ms;
+  animation-delay: 1556ms;
+}
+@keyframes move-snow-83 {
+  0% {
+    transform: translate3d(39vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(20vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 84) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-84;
+  animation-duration: 28437ms;
+  animation-delay: 12091ms;
+}
+@keyframes move-snow-84 {
+  0% {
+    transform: translate3d(85vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(88vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 85) {
+  width: 11px;
+  height: 11px;
+  animation-name: move-snow-85;
+  animation-duration: 28390ms;
+  animation-delay: 4607ms;
+}
+@keyframes move-snow-85 {
+  0% {
+    transform: translate3d(-4vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(82vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 86) {
+  width: 3px;
+  height: 3px;
+  animation-name: move-snow-86;
+  animation-duration: 28146ms;
+  animation-delay: 18539ms;
+}
+@keyframes move-snow-86 {
+  0% {
+    transform: translate3d(6vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(31vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 87) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-87;
+  animation-duration: 28320ms;
+  animation-delay: 33434ms;
+}
+@keyframes move-snow-87 {
+  0% {
+    transform: translate3d(21vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(80vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 88) {
+  width: 2px;
+  height: 2px;
+  animation-name: move-snow-88;
+  animation-duration: 28851ms;
+  animation-delay: 55160ms;
+}
+@keyframes move-snow-88 {
+  0% {
+    transform: translate3d(75vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(32vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 89) {
+  width: 4px;
+  height: 4px;
+  animation-name: move-snow-89;
+  animation-duration: 28620ms;
+  animation-delay: 16078ms;
+}
+@keyframes move-snow-89 {
+  0% {
+    transform: translate3d(33vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(37vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 90) {
+  width: 12px;
+  height: 12px;
+  animation-name: move-snow-90;
+  animation-duration: 28413ms;
+  animation-delay: 7631ms;
+}
+@keyframes move-snow-90 {
+  0% {
+    transform: translate3d(42vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(18vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 91) {
+  width: 10px;
+  height: 10px;
+  animation-name: move-snow-91;
+  animation-duration: 28704ms;
+  animation-delay: 39629ms;
+}
+@keyframes move-snow-91 {
+  0% {
+    transform: translate3d(54vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(52vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 92) {
+  width: 14px;
+  height: 14px;
+  animation-name: move-snow-92;
+  animation-duration: 28942ms;
+  animation-delay: 810ms;
+}
+@keyframes move-snow-92 {
+  0% {
+    transform: translate3d(7vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(89vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 93) {
+  width: 2px;
+  height: 2px;
+  animation-name: move-snow-93;
+  animation-duration: 28514ms;
+  animation-delay: 35018ms;
+}
+@keyframes move-snow-93 {
+  0% {
+    transform: translate3d(50vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(70vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 94) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-94;
+  animation-duration: 28084ms;
+  animation-delay: 41466ms;
+}
+@keyframes move-snow-94 {
+  0% {
+    transform: translate3d(79vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(58vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 95) {
+  width: 14px;
+  height: 14px;
+  animation-name: move-snow-95;
+  animation-duration: 28424ms;
+  animation-delay: 24814ms;
+}
+@keyframes move-snow-95 {
+  0% {
+    transform: translate3d(8vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(46vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 96) {
+  width: 1px;
+  height: 1px;
+  animation-name: move-snow-96;
+  animation-duration: 28432ms;
+  animation-delay: 9012ms;
+}
+@keyframes move-snow-96 {
+  0% {
+    transform: translate3d(30vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(39vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 97) {
+  width: 7px;
+  height: 7px;
+  animation-name: move-snow-97;
+  animation-duration: 28403ms;
+  animation-delay: 27844ms;
+}
+@keyframes move-snow-97 {
+  0% {
+    transform: translate3d(58vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(59vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 98) {
+  width: 10px;
+  height: 10px;
+  animation-name: move-snow-98;
+  animation-duration: 28558ms;
+  animation-delay: 6329ms;
+}
+@keyframes move-snow-98 {
+  0% {
+    transform: translate3d(7vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(74vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 99) {
+  width: 7px;
+  height: 7px;
+  animation-name: move-snow-99;
+  animation-duration: 28217ms;
+  animation-delay: 54590ms;
+}
+@keyframes move-snow-99 {
+  0% {
+    transform: translate3d(36vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(46vw, 100vh, 0);
+  }
+}
+
+.snow:nth-of-type(3n + 100) {
+  width: 10px;
+  height: 10px;
+  animation-name: move-snow-100;
+  animation-duration: 28169ms;
+  animation-delay: 16551ms;
+}
+@keyframes move-snow-100 {
+  0% {
+    transform: translate3d(33vw, 0vh, 0);
+  }
+  100% {
+    transform: translate3d(93vw, 100vh, 0);
+  }
+}
+
+.snow {
+  position: absolute;
+  background-color: transparent;
+  border-radius: 50%;
+  transform: translateY(-10vh);
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.snowflake {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: circle-scale 4000ms linear infinite;
+  background: url(../images/Snowflake-Photoroom.png-Photoroom.png) center center/100% no-repeat;
+}/*# sourceMappingURL=style.css.map */
