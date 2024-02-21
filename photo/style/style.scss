@@ -1,0 +1,80 @@
+@import './reset.scss';
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/forest.jpg) center center / cover no-repeat;
+    overflow: hidden; 
+  }
+.snow-container{
+    position: relative;
+}
+
+@keyframes circle-scale {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes opacitySnow {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
+}
+
+
+$--startValue: 100;
+$--startSize: 15;
+$--startPosition: random(100) + vw;
+
+@for $i from 1 through $--startValue{
+    .snow:nth-of-type(3n + #{$i}){
+        $snowFlakeSize: random($--startSize);
+        width: $snowFlakeSize + px;
+        height: $snowFlakeSize + px;
+        $startSnowPosition: random(100) - 10; 
+  
+    $animationName: 'move-snow-' + $i;
+    $moveDuration: 28000 + random(1000) + ms;
+    animation-name: #{$animationName};
+    animation-duration: $moveDuration;
+    animation-delay: random(57000) + ms;
+    @keyframes #{$animationName} {
+        0% {
+            transform: translate3d($startSnowPosition + vw, 0vh, 0) ;
+           
+        }
+        100% {
+            transform: translate3d(random(100) + vw, 100vh, 0) ;
+            
+        }
+    }
+    }
+}
+
+.snow {
+   position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    transform: translateY(-10vh);
+    // animation: circle-move 50s linear infinite;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.snowflake{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: circle-scale 4000ms linear infinite;
+    background: url(../images/Snowflake-Photoroom.png-Photoroom.png) center center / 100% no-repeat;
+}
+
+
